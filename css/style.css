@@ -895,3 +895,16 @@ legend.field__label { margin-bottom: 12px; }
 .gallery-more[hidden] { display: none; }
 .gallery-more .ico { transition: transform .3s var(--ease); }
 .gallery-more .is-expanded .ico { transform: rotate(180deg); }
+
+/* Czat po prawej stronie ekranu */
+.chat { left: auto; right: 20px; }
+.chat__launcher { margin-left: auto; }
+.chat__teaser { left: auto; right: 0; }
+.chat__teaser-body { border-radius: 20px 20px 6px 20px; }
+.chat__teaser-x { right: auto; left: -10px; }
+.chat__panel { left: auto; right: 0; transform-origin: right bottom; }
+@media (max-width: 720px) {
+  .chat { left: auto; right: 14px; }
+  .chat.is-open { inset: 0; left: 0; right: 0; }
+  .chat__panel { left: 8px; right: 8px; }
+}
