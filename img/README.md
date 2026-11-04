@@ -17,10 +17,10 @@ zdjęcie właściciela pionowe 4:5.
 | `img/uslugi/elektryka-rozdzielnica` | Rozdzielnica elektryczna | 525lochp6lo-imag1641 |
 | `img/uslugi/elektryka-dom` | Instalacja elektryczna w domu | – |
 | `img/uslugi/elektryka-osprzet` | Osprzęt / oświetlenie | – |
-| `img/uslugi/serwis-klimatyzacji` | Serwisant czyści klimatyzator (góra podstrony „Serwis”) | – (do wygenerowania) |
-| `img/uslugi/serwis-diagnostyka` | Pomiar ciśnień manometrami (podstrona „Serwis”) | – (do wygenerowania) |
-| `img/uslugi/pompa-ciepla-kotlownia` | Kotłownia z pompą ciepła (podstrona „Pompy ciepła”) | – (do wygenerowania) |
-| `img/uslugi/chlodnictwo-instalacja` | Instalacja chłodnicza w zakładzie (góra podstrony „Chłodnictwo”) | – (do wygenerowania) |
+| `img/uslugi/serwis-klimatyzacji` | Serwisant czyści klimatyzator (góra podstrony „Serwis”) | – (wygenerowane) |
+| `img/uslugi/serwis-diagnostyka` | Pomiar ciśnień manometrami (podstrona „Serwis”) | – (wygenerowane) |
+| `img/uslugi/pompa-ciepla-kotlownia` | Kotłownia z pompą ciepła (podstrona „Pompy ciepła”) | – (wygenerowane) |
+| `img/uslugi/chlodnictwo-instalacja` | Instalacja chłodnicza w zakładzie (góra podstrony „Chłodnictwo”) | – (wygenerowane) |
 | `img/realizacje/dom-kominek` | Wnętrze z marmurowym kominkiem | crop-imag3906 |
 | `img/realizacje/dom-nad-drzwiami` | Szary klimatyzator nad drzwiami | crop-imag3918 |
 | `img/realizacje/dom-korytarz` | Klimatyzator w korytarzu | crop-imag3912 |
