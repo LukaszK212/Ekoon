@@ -35,6 +35,18 @@ Ceny są **orientacyjne i przykładowe** – do potwierdzenia z klientem. Wszyst
 w jednym miejscu: obiekt `PRICES` w `js/main.js`. Wycenę z kalkulatora można jednym kliknięciem
 dołączyć do formularza (ukryte pole `wycena-z-kalkulatora`).
 
+## Asystent czatu (lewy dolny róg)
+
+`js/chat.js` – asystent działający w całości w przeglądarce, bez zewnętrznych usług i kosztów.
+Po ~5 s pokazuje dymek „Cześć! W czym pomóc?” (raz na wizytę), rozmowa jest pamiętana przy przechodzeniu między podstronami.
+
+- Odpowiedzi: tablica `INTENTS` – każdy temat ma słowa kluczowe (`k`, początki słów bez polskich znaków) i odpowiedź (`a`).
+  Żeby dodać pytanie, dopisz nowy obiekt z listą słów i treścią odpowiedzi.
+- Ceny bierze z kalkulatora (`PRICES` w `js/main.js`), więc po zmianie cennika odpowiedzi aktualizują się same.
+- Liczy dobór mocy z metrażu („pokój 30 m² na poddaszu”, „dom 150 m² pompa”), podaje, czy firma jest teraz otwarta,
+  rozpoznaje miejscowości z obszaru działania, a podany numer telefonu wpisuje do formularza.
+- Dane kontaktowe na górze pliku (`PHONE`, `EMAIL`, `HOURS`, `TOWNS`) – do podmiany razem z resztą strony.
+
 ## Dane tymczasowe – do podmiany przed publikacją
 
 Szukaj i zamieniaj we wszystkich plikach `.html` (oraz w `polityka-*.html`):
@@ -45,7 +57,8 @@ Szukaj i zamieniaj we wszystkich plikach `.html` (oraz w `polityka-*.html`):
 | `kontakt@ekoon.pl` | e-mail |
 | `https://ekoon.pl/` | domena (canonical, og, sitemap, robots, JSON-LD) |
 | „ponad 8 lat” / `8+` | doświadczenie – brief podaje 8 lub 16 lat |
-| ceny w `PRICES` (`js/main.js`) | kalkulator |
+| ceny w `PRICES` (`js/main.js`) | kalkulator i asystent czatu |
+| `PHONE`, `EMAIL` w `js/chat.js` | asystent czatu |
 
 Do potwierdzenia u klienta (z briefu): adres, lista miejscowości, godziny, marki/autoryzacje,
 uprawnienia F-gaz i SEP (warto dodać na stronę), gwarancja, czy smart home i automatyka bram są w ofercie,

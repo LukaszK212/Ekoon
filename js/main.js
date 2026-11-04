@@ -317,6 +317,8 @@
     }
   };
 
+  window.ekoonPrices = PRICES; // używane przez asystenta czatu (js/chat.js)
+
   var calc = $('[data-calc]');
   if (calc) {
     var form = $('[data-calc-form]', calc);
