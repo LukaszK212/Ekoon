@@ -21,16 +21,30 @@
     var img = new Image();
     img.alt = el.getAttribute('data-alt') || '';
     img.decoding = 'async';
-    if (el.hasAttribute('data-eager')) { img.fetchPriority = 'high'; } else { img.loading = 'lazy'; }
+    if (el.hasAttribute('data-eager')) img.fetchPriority = 'high';
     img.onload = function () { el.classList.add('has-img'); };
     img.onerror = function () {
       i += 1;
-      if (i < exts.length) { img.src = base + exts[i]; } else if (img.parentNode) { img.parentNode.removeChild(img); }
+      if (i < exts.length) { img.src = base + exts[i]; } else { img.style.display = 'none'; }
     };
     el.appendChild(img);
     img.src = base + exts[0];
   }
-  $$('.photo[data-src]').forEach(loadPhoto);
+  // Zdjęcia poza ekranem ładujemy, gdy zbliżają się do widoku (własny mechanizm
+  // zamiast loading="lazy", który w części przeglądarek mobilnych bywał zawodny).
+  var photos = $$('.photo[data-src]');
+  var later = [];
+  photos.forEach(function (el) { if (el.hasAttribute('data-eager')) { loadPhoto(el); } else { later.push(el); } });
+  if ('IntersectionObserver' in window) {
+    var pObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { pObs.unobserve(en.target); loadPhoto(en.target); }
+      });
+    }, { rootMargin: '600px 0px' });
+    later.forEach(function (el) { pObs.observe(el); });
+  } else {
+    later.forEach(loadPhoto);
+  }
 
   /* ---------- Rok w stopce ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
