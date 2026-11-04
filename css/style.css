@@ -715,3 +715,9 @@ legend.field__label { margin-bottom: 12px; }
   .brand-card__badge { right: 12px; }
   .brand-card__facts b { font-size: 24px; }
 }
+
+/* Kadrowanie zdjęcia głównego – klimatyzator jest u góry kadru */
+.photo--hero img { object-position: 50% 6%; }
+.float-card--temp { top: 44%; }
+.float-card--pill { bottom: 22%; }
+@media (max-width: 720px) { .float-card--temp { display: none; } .hero__visual { padding-top: 0; } }
