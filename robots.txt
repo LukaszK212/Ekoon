@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dziekujemy.html
+
+Sitemap: https://ekoon.pl/sitemap.xml
