@@ -733,7 +733,7 @@ legend.field__label { margin-bottom: 12px; }
 
 /* Wskaźnik temperatury na telefonie – po lewej, w połowie wysokości zdjęcia */
 @media (max-width: 720px) {
-  .float-card--temp { display: flex; top: 40%; bottom: auto; left: -8px; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 16px; }
+  .float-card--temp { display: flex; top: 40%; bottom: auto; left: auto; right: -8px; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 16px; }
   .float-card--temp .float-card__icon { width: 36px; height: 36px; border-radius: 11px; }
   .float-card--temp .float-card__icon .ico { width: 20px; height: 20px; }
   .float-card--temp .float-card__big { font-size: 19px; }
