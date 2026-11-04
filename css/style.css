@@ -882,3 +882,10 @@ legend.field__label { margin-bottom: 12px; }
   .chat.is-open::before { content: ""; position: fixed; inset: 0; background: rgba(10, 30, 51, .35); }
 }
 @media print { .chat { display: none; } }
+
+/* Czat na telefonie: zjeżdża w dół, gdy pasek „Zadzwoń / Bezpłatna wycena” się chowa,
+   i wraca nad niego, gdy pasek się pojawia */
+@media (max-width: 720px) {
+  .chat { transition: transform .35s var(--ease); }
+  .callbar.is-hidden ~ .chat:not(.is-open) { transform: translateY(74px); }
+}
