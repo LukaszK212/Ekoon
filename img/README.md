@@ -10,8 +10,7 @@ zdjęcie właściciela pionowe 4:5.
 | Plik (bez rozszerzenia) | Co powinno przedstawiać | Źródło z briefu (Oferteo) |
 |---|---|---|
 | `img/hero` | Zdjęcie główne – klimatyzator w ładnym wnętrzu | crop-imag3906 |
-| `img/tomasz-romanowski` | Zdjęcie właściciela (pionowe) | – (od klienta) |
-| `img/og.jpg` | Grafika do udostępnień FB (1200×630, **tylko .jpg**) | – |
+| `img/og.jpg` | Grafika do udostępnień FB – **już gotowa** (wygenerowana) | – |
 | `img/uslugi/montaz-klimatyzacji` | Nowy klimatyzator na ścianie | 214422505-crop-imag3818 |
 | `img/uslugi/firmy-agregaty-dach` | Agregaty na dachu firmy | 214415020-crop-imag3825 |
 | `img/uslugi/pompa-ciepla-montaz` | Montaż pompy ciepła | – |

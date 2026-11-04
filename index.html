@@ -175,7 +175,7 @@
       <p class="hero__lead">Montujemy, serwisujemy i modernizujemy urządzenia w domach, biurach i zakładach produkcyjnych. Czysto, terminowo i z uczciwą wyceną – bez niespodzianek na fakturze.</p>
       <div class="hero__ctas">
         <a class="btn btn--accent btn--lg" href="tel:+48500600700"><svg class="ico"><use href="#i-phone"/></svg>Zadzwoń</a>
-        <a class="btn btn--glass btn--lg" href="#kontakt">Bezpłatna wycena<svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--glass btn--lg" href="#formularz">Bezpłatna wycena<svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
       <a class="hero__calc-link" href="#kalkulator"><svg class="ico"><use href="#i-calc"/></svg>Sprawdź orientacyjną cenę w kalkulatorze</a>
       <ul class="trust">
@@ -261,7 +261,7 @@
         <h3>Planujesz docieplenie elewacji?</h3>
         <p>Przygotujemy instalację klimatyzacji tak, żeby ekipa od elewacji nie musiała demontować agregatów. Oszczędzasz czas, pieniądze i nerwy.</p>
       </div>
-      <a class="btn btn--outline" href="#kontakt">Zapytaj o termin</a>
+      <a class="btn btn--outline" href="#formularz">Zapytaj o termin</a>
     </div>
   </div>
 </section>
@@ -438,7 +438,7 @@
           <div class="calc__power"><svg class="ico"><use href="#i-snow"/></svg><span data-out="power">Zalecana moc: 3,5 kW</span></div>
           <ul class="calc__breakdown" data-out="breakdown"></ul>
           <p class="calc__notice" data-out="notice" hidden></p>
-          <a class="btn btn--accent btn--block" href="#kontakt" data-calc-send><svg class="ico"><use href="#i-paperclip"/></svg>Dołącz wycenę do zapytania</a>
+          <a class="btn btn--accent btn--block" href="#formularz" data-calc-send><svg class="ico"><use href="#i-paperclip"/></svg>Dołącz wycenę do zapytania</a>
           <p class="calc__note">To wycena orientacyjna. Ostateczną cenę podajemy po bezpłatnych oględzinach – zawsze przed rozpoczęciem prac.</p>
         </aside>
       </div>
@@ -461,7 +461,7 @@
         <li><span><svg class="ico"><use href="#i-refresh"/></svg></span><div><b>Modernizacje i naprawy</b>Przywracamy sprawność starszym instalacjom zamiast od razu je wymieniać.</div></li>
       </ul>
       <div class="b2b__ctas">
-        <a class="btn btn--accent" href="#kontakt" data-service="Umowa serwisowa dla firmy">Zapytaj o umowę serwisową</a>
+        <a class="btn btn--accent" href="#formularz" data-service="Umowa serwisowa dla firmy">Zapytaj o umowę serwisową</a>
         <a class="link-light" href="chlodnictwo-lodz.html">Chłodnictwo dla firm<svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -480,13 +480,20 @@
 <!-- DLACZEGO MY / O MNIE -->
 <section class="section" id="dlaczego">
   <div class="container why">
-    <div class="why__owner reveal">
-      <div class="photo photo--portrait" data-src="img/tomasz-romanowski" data-alt="Tomasz Romanowski, właściciel firmy ekoON" data-label="Zdjęcie właściciela – Tomasz Romanowski"></div>
-      <div class="owner-card">
-        <p>„Każde zlecenie prowadzę osobiście – od oględzin po uruchomienie urządzenia. Dzięki temu wiem, że praca jest wykonana dokładnie tak, jak się umówiliśmy.”</p>
-        <span class="owner-card__name">Tomasz Romanowski</span>
-        <span class="owner-card__role">właściciel ekoON</span>
+    <div class="why__card reveal">
+      <div class="brand-card">
+        <svg class="brand-card__bg" aria-hidden="true"><use href="#i-snow"/></svg>
+        <svg class="brand-card__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="url(#g-brand)"/><path d="M13.6 14.6a9 9 0 1 0 12.8 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M20 7.5c3.2 3 3.4 7.2 0 11.5-3.4-4.3-3.2-8.5 0-11.5z" fill="#fff"/></svg>
+        <svg class="brand-card__q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="brand-card__quote">Każde zlecenie prowadzę osobiście – od oględzin po uruchomienie urządzenia. Dzięki temu wiem, że praca jest wykonana dokładnie tak, jak się umówiliśmy.</p>
+        <div class="brand-card__sign"><span class="brand-card__mono">TR</span><span><b>Tomasz Romanowski</b><small>właściciel ekoON</small></span></div>
+        <ul class="brand-card__facts">
+          <li><b>8+</b><span>lat doświadczenia</span></li>
+          <li><b>300+</b><span>urządzeń w serwisie</span></li>
+          <li><b>5,0</b><span>ocena klientów</span></li>
+        </ul>
       </div>
+      <div class="brand-card__badge"><svg class="ico"><use href="#i-users"/></svg><span><b>Jeden fachowiec</b>od wyceny do serwisu</span></div>
     </div>
     <div class="why__content">
       <header class="sec-head sec-head--left reveal">
@@ -642,46 +649,14 @@
         <a class="ccard" href="mailto:kontakt@ekoon.pl"><span class="ccard__icon"><svg class="ico"><use href="#i-mail"/></svg></span><span><small>E-mail</small><b>kontakt@ekoon.pl</b></span></a>
         <a class="ccard" href="https://www.facebook.com/toomaszromanowski/" target="_blank" rel="noopener"><span class="ccard__icon"><svg class="ico"><use href="#i-fb"/></svg></span><span><small>Facebook</small><b>Ekoon</b></span></a>
       </div>
-      <div class="hours">
-        <div class="hours__head"><span><svg class="ico"><use href="#i-clock"/></svg>Godziny pracy</span><span class="open-badge" data-open-badge></span></div>
-        <ul class="hours__list" data-hours>
-          <li data-day="1"><span>Poniedziałek</span><span>8:30 – 17:00</span></li>
-          <li data-day="2"><span>Wtorek</span><span>7:00 – 15:00</span></li>
-          <li data-day="3"><span>Środa</span><span>7:00 – 15:00</span></li>
-          <li data-day="4"><span>Czwartek</span><span>7:00 – 15:00</span></li>
-          <li data-day="5"><span>Piątek</span><span>7:00 – 15:00</span></li>
-          <li data-day="6"><span>Sobota – niedziela</span><span>nieczynne</span></li>
-        </ul>
-      </div>
-      <div class="area">
-        <div class="area__head"><svg class="ico"><use href="#i-pin"/></svg><span>Obszar działania</span></div>
-        <svg class="area__map" viewBox="0 0 460 340" role="img" aria-label="Mapa obszaru działania: Łódź, Zgierz, Konstantynów Łódzki, Pabianice, Ksawerów, Rzgów, Tuszyn, Andrespol, Brzeziny, Koluszki">
-          <defs>
-            <radialGradient id="g-area" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2BA8E0" stop-opacity=".28"/><stop offset="1" stop-color="#2BA8E0" stop-opacity="0"/></radialGradient>
-            <pattern id="p-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" fill="#0F2A44" opacity=".09"/></pattern>
-          </defs>
-          <rect width="460" height="340" fill="url(#p-dots)"/>
-          <circle cx="200" cy="195" r="175" fill="url(#g-area)"/>
-          <circle class="area__ring" cx="200" cy="195" r="150"/>
-          <path class="area__road" d="M10 150 C 90 160, 140 165, 165 162 S 300 175, 450 178"/>
-          <path class="area__road" d="M140 20 C 150 80, 160 130, 165 162 S 190 250, 222 330"/>
-          <path class="area__road area__road--thin" d="M165 162 L 100 255"/>
-          <g class="area__city area__city--major"><circle cx="165" cy="162" r="9"/><text x="165" y="140">Łódź</text></g>
-          <g class="area__city"><circle cx="130" cy="66" r="5"/><text x="130" y="52">Zgierz</text></g>
-          <g class="area__city"><circle cx="80" cy="172" r="5"/><text x="70" y="196">Konstantynów Ł.</text></g>
-          <g class="area__city"><circle cx="98" cy="256" r="6"/><text x="98" y="280">Pabianice</text></g>
-          <g class="area__city"><circle cx="128" cy="236" r="4"/><text x="122" y="222" class="sm">Ksawerów</text></g>
-          <g class="area__city area__city--base"><circle cx="186" cy="252" r="8"/><text x="230" y="256">Rzgów</text></g>
-          <g class="area__city"><circle cx="222" cy="312" r="5"/><text x="262" y="316">Tuszyn</text></g>
-          <g class="area__city"><circle cx="276" cy="200" r="4"/><text x="276" y="222" class="sm">Andrespol</text></g>
-          <g class="area__city"><circle cx="350" cy="122" r="5"/><text x="350" y="108">Brzeziny</text></g>
-          <g class="area__city"><circle cx="388" cy="178" r="6"/><text x="388" y="202">Koluszki</text></g>
-        </svg>
-        <p class="area__legend"><span class="dot dot--base"></span>Siedziba: Guzew 16, 95-030 Rzgów <span class="dot dot--city"></span>Dojeżdżamy</p>
-      </div>
+      <ol class="next-steps">
+        <li><span>1</span><div><b>Oddzwonimy</b>i dopytamy o szczegóły – zwykle jeszcze tego samego dnia roboczego.</div></li>
+        <li><span>2</span><div><b>Umówimy oględziny</b>w dogodnym terminie – bezpłatnie i bez zobowiązań.</div></li>
+        <li><span>3</span><div><b>Podamy konkretną cenę</b>zanim zaczniemy jakiekolwiek prace.</div></li>
+      </ol>
     </div>
 
-    <div class="contact__form reveal">
+    <div class="contact__form reveal" id="formularz">
       <form class="form" name="wycena" method="POST" action="dziekujemy.html" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
         <input type="hidden" name="form-name" value="wycena">
         <p class="hidden-field"><label>Nie wypełniaj: <input name="bot-field"></label></p>
@@ -719,6 +694,45 @@
         <button class="btn btn--accent btn--lg btn--block" type="submit">Wyślij zapytanie<svg class="ico"><use href="#i-arrow"/></svg></button>
         <p class="form__foot"><svg class="ico"><use href="#i-shield"/></svg>Twoje dane służą wyłącznie do kontaktu w sprawie zapytania.</p>
       </form>
+    </div>
+    <div class="contact__extra reveal">
+      <div class="hours">
+        <div class="hours__head"><span><svg class="ico"><use href="#i-clock"/></svg>Godziny pracy</span><span class="open-badge" data-open-badge></span></div>
+        <ul class="hours__list" data-hours>
+          <li data-day="1"><span>Poniedziałek</span><span>8:30 – 17:00</span></li>
+          <li data-day="2"><span>Wtorek</span><span>7:00 – 15:00</span></li>
+          <li data-day="3"><span>Środa</span><span>7:00 – 15:00</span></li>
+          <li data-day="4"><span>Czwartek</span><span>7:00 – 15:00</span></li>
+          <li data-day="5"><span>Piątek</span><span>7:00 – 15:00</span></li>
+          <li data-day="6"><span>Sobota – niedziela</span><span>nieczynne</span></li>
+        </ul>
+      </div>
+      <div class="area">
+        <div class="area__head"><svg class="ico"><use href="#i-pin"/></svg><span>Obszar działania</span></div>
+        <svg class="area__map" viewBox="0 0 460 340" role="img" aria-label="Mapa obszaru działania: Łódź, Zgierz, Konstantynów Łódzki, Pabianice, Ksawerów, Rzgów, Tuszyn, Andrespol, Brzeziny, Koluszki">
+          <defs>
+            <radialGradient id="g-area" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2BA8E0" stop-opacity=".28"/><stop offset="1" stop-color="#2BA8E0" stop-opacity="0"/></radialGradient>
+            <pattern id="p-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" fill="#0F2A44" opacity=".09"/></pattern>
+          </defs>
+          <rect width="460" height="340" fill="url(#p-dots)"/>
+          <circle cx="200" cy="195" r="175" fill="url(#g-area)"/>
+          <circle class="area__ring" cx="200" cy="195" r="150"/>
+          <path class="area__road" d="M10 150 C 90 160, 140 165, 165 162 S 300 175, 450 178"/>
+          <path class="area__road" d="M140 20 C 150 80, 160 130, 165 162 S 190 250, 222 330"/>
+          <path class="area__road area__road--thin" d="M165 162 L 100 255"/>
+          <g class="area__city area__city--major"><circle cx="165" cy="162" r="9"/><text x="165" y="140">Łódź</text></g>
+          <g class="area__city"><circle cx="130" cy="66" r="5"/><text x="130" y="52">Zgierz</text></g>
+          <g class="area__city"><circle cx="80" cy="172" r="5"/><text x="70" y="196">Konstantynów Ł.</text></g>
+          <g class="area__city"><circle cx="98" cy="256" r="6"/><text x="98" y="280">Pabianice</text></g>
+          <g class="area__city"><circle cx="128" cy="236" r="4"/><text x="122" y="222" class="sm">Ksawerów</text></g>
+          <g class="area__city area__city--base"><circle cx="186" cy="252" r="8"/><text x="230" y="256">Rzgów</text></g>
+          <g class="area__city"><circle cx="222" cy="312" r="5"/><text x="262" y="316">Tuszyn</text></g>
+          <g class="area__city"><circle cx="276" cy="200" r="4"/><text x="276" y="222" class="sm">Andrespol</text></g>
+          <g class="area__city"><circle cx="350" cy="122" r="5"/><text x="350" y="108">Brzeziny</text></g>
+          <g class="area__city"><circle cx="388" cy="178" r="6"/><text x="388" y="202">Koluszki</text></g>
+        </svg>
+        <p class="area__legend"><span class="dot dot--base"></span>Siedziba: Guzew 16, 95-030 Rzgów <span class="dot dot--city"></span>Dojeżdżamy</p>
+      </div>
     </div>
   </div>
 </section>
@@ -774,7 +788,7 @@
 
 <div class="callbar" data-callbar>
   <a class="callbar__call" href="tel:+48500600700"><svg class="ico"><use href="#i-phone"/></svg>Zadzwoń</a>
-  <a class="callbar__quote" href="#kontakt">Bezpłatna wycena</a>
+  <a class="callbar__quote" href="#formularz">Bezpłatna wycena</a>
 </div>
 <!-- /@footer -->
 

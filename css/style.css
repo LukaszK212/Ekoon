@@ -673,3 +673,45 @@ legend.field__label { margin-bottom: 12px; }
   .js .reveal { opacity: 1; transform: none; }
   .hero__flow path { stroke-dasharray: none; opacity: .25; }
 }
+
+/* ---------- Kontakt: formularz wyżej, godziny i obszar pod nim ---------- */
+.contact { grid-template-areas: "info form" "extra extra"; row-gap: 40px; }
+.contact__info { grid-area: info; }
+.contact__form { grid-area: form; }
+.contact__extra { grid-area: extra; display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; align-items: start; }
+.contact__extra .hours, .contact__extra .area { margin-top: 0; }
+.form { position: static; }
+.next-steps { display: grid; gap: 16px; margin-top: 28px; padding: 24px; border-radius: var(--r); background: #fff; border: 1px solid var(--line); }
+.next-steps li { display: flex; gap: 14px; font-size: 15px; color: var(--muted); }
+.next-steps li > span { width: 30px; height: 30px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #fff; font-family: var(--font-head); font-weight: 800; font-size: 14px; }
+.next-steps b { display: block; color: var(--navy); font-family: var(--font-head); font-size: 15.5px; }
+@media (max-width: 980px) {
+  .contact { grid-template-areas: "info" "form" "extra"; }
+  .contact__extra { grid-template-columns: 1fr; }
+  .next-steps { display: none; }
+}
+
+/* ---------- Karta właściciela (zamiast zdjęcia) ---------- */
+.why__card { position: relative; padding-bottom: 36px; }
+.brand-card { position: relative; isolation: isolate; overflow: hidden; padding: 40px 36px 32px; border-radius: var(--r-xl); background: var(--navy); color: rgba(255, 255, 255, .78); box-shadow: var(--sh-lg); }
+.brand-card::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(80% 60% at 100% 0%, rgba(43, 168, 224, .45), transparent 60%), radial-gradient(70% 50% at 0% 100%, rgba(59, 178, 115, .3), transparent 60%); }
+.brand-card__bg { position: absolute; z-index: -1; right: -70px; top: -60px; width: 300px; height: 300px; fill: none; stroke: rgba(255, 255, 255, .06); stroke-width: 1.2; stroke-linecap: round; animation: spin 60s linear infinite; }
+.brand-card__mark { width: 64px; height: 64px; filter: drop-shadow(0 10px 24px rgba(43, 168, 224, .45)); }
+.brand-card__q { width: 36px; height: 36px; margin-top: 30px; color: var(--blue); opacity: .8; }
+.brand-card__quote { margin-top: 12px; font-family: var(--font-head); font-weight: 600; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.45; color: #fff; letter-spacing: -.01em; }
+.brand-card__sign { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+.brand-card__mono { width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .08); border: 1.5px solid rgba(255, 255, 255, .25); color: #fff; font-family: var(--font-head); font-weight: 800; letter-spacing: .04em; }
+.brand-card__sign b { display: block; color: #fff; font-family: var(--font-head); font-size: 17px; }
+.brand-card__sign small { font-size: 13.5px; color: rgba(255, 255, 255, .6); }
+.brand-card__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px dashed rgba(255, 255, 255, .18); }
+.brand-card__facts b { display: block; font-family: var(--font-head); font-weight: 800; font-size: 28px; line-height: 1; letter-spacing: -.03em; background: linear-gradient(120deg, #fff 20%, #8fd6f5); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand-card__facts span { display: block; margin-top: 6px; font-size: 13px; color: rgba(255, 255, 255, .6); }
+.brand-card__badge { position: absolute; right: -18px; bottom: 0; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px; background: #fff; box-shadow: var(--sh-lg); font-size: 13.5px; color: var(--muted); animation: bob 6s ease-in-out infinite; }
+.brand-card__badge .ico { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: var(--green-50); color: var(--green-600); }
+.brand-card__badge b { display: block; color: var(--navy); font-family: var(--font-head); font-size: 15px; }
+@media (max-width: 980px) { .why__card { max-width: 520px; margin-inline: auto; width: 100%; } }
+@media (max-width: 720px) {
+  .brand-card { padding: 30px 22px 26px; }
+  .brand-card__badge { right: 12px; }
+  .brand-card__facts b { font-size: 24px; }
+}
