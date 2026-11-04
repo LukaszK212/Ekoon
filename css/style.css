@@ -785,3 +785,20 @@ legend.field__label { margin-bottom: 12px; }
 .nav__list a:hover, .nav__list a.is-active { color: var(--navy); background: rgba(15, 42, 68, .06); }
 .nav__cta { background: var(--navy); border-color: var(--navy); box-shadow: 0 6px 18px rgba(15, 42, 68, .2); }
 .burger { color: var(--navy); background: rgba(255, 255, 255, .7); border-color: var(--line); }
+
+/* Zakładki kalkulatora na telefonie – strzałka sygnalizująca przewijanie */
+.calc__tabs-wrap { position: relative; }
+.calc__tabs-more { display: none; }
+@media (max-width: 720px) {
+  .calc__tabs-wrap.has-more .calc__tabs-more { display: grid; place-items: center; position: absolute; top: 0; right: 0; bottom: 1px; width: 64px; padding-left: 18px; border-radius: 0 var(--r-lg) 0 0; color: var(--navy);
+    background: linear-gradient(90deg, rgba(245, 248, 250, 0), var(--bg) 45%); }
+  .calc__tabs-more .ico { width: 30px; height: 30px; padding: 6px; border-radius: 50%; background: #fff; box-shadow: var(--sh); color: var(--blue-600); stroke-width: 2.6; animation: nudge 1.6s ease-in-out infinite; }
+  .calc__tabs { padding-right: 56px; }
+}
+@keyframes nudge { 50% { transform: translateX(4px); } }
+
+/* Karta właściciela na telefonie – dymek „Jeden fachowiec” niżej, nie zasłania liczb */
+@media (max-width: 720px) {
+  .why__card { padding-bottom: 64px; }
+  .brand-card__badge { bottom: 0; }
+}

@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -276,10 +276,13 @@
     </header>
 
     <div class="calc reveal" data-calc>
-      <div class="calc__tabs" role="tablist" aria-label="Rodzaj wyceny">
-        <button class="calc__tab" type="button" role="tab" id="tab-montaz" aria-controls="panel-montaz" aria-selected="true" data-mode="montaz"><svg class="ico"><use href="#i-ac"/></svg><span>Montaż klimatyzacji</span></button>
-        <button class="calc__tab" type="button" role="tab" id="tab-serwis" aria-controls="panel-serwis" aria-selected="false" tabindex="-1" data-mode="serwis"><svg class="ico"><use href="#i-wrench"/></svg><span>Serwis i czyszczenie</span></button>
-        <button class="calc__tab" type="button" role="tab" id="tab-pompa" aria-controls="panel-pompa" aria-selected="false" tabindex="-1" data-mode="pompa"><svg class="ico"><use href="#i-heatpump"/></svg><span>Pompa ciepła</span></button>
+      <div class="calc__tabs-wrap" data-tabs-wrap>
+        <div class="calc__tabs" role="tablist" aria-label="Rodzaj wyceny">
+          <button class="calc__tab" type="button" role="tab" id="tab-montaz" aria-controls="panel-montaz" aria-selected="true" data-mode="montaz"><svg class="ico"><use href="#i-ac"/></svg><span>Montaż klimatyzacji</span></button>
+          <button class="calc__tab" type="button" role="tab" id="tab-serwis" aria-controls="panel-serwis" aria-selected="false" tabindex="-1" data-mode="serwis"><svg class="ico"><use href="#i-wrench"/></svg><span>Serwis i czyszczenie</span></button>
+          <button class="calc__tab" type="button" role="tab" id="tab-pompa" aria-controls="panel-pompa" aria-selected="false" tabindex="-1" data-mode="pompa"><svg class="ico"><use href="#i-heatpump"/></svg><span>Pompa ciepła</span></button>
+        </div>
+        <button type="button" class="calc__tabs-more" data-tabs-more aria-label="Pokaż kolejne zakładki" tabindex="-1"><svg class="ico"><use href="#i-right"/></svg></button>
       </div>
 
       <div class="calc__body">
@@ -799,6 +802,6 @@
   <button type="button" class="lightbox__nav lightbox__nav--next round-btn" data-lb-next aria-label="Następne zdjęcie"><svg class="ico"><use href="#i-right"/></svg></button>
 </dialog>
 
-<script src="js/main.js?v=6" defer></script>
+<script src="js/main.js?v=8" defer></script>
 </body>
 </html>

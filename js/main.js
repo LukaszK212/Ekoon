@@ -458,6 +458,22 @@
       render();
     }
 
+    // Strzałka „przewiń” przy zakładkach na wąskich ekranach
+    var tabsWrap = $('[data-tabs-wrap]', calc);
+    if (tabsWrap) {
+      var tabsEl = $('.calc__tabs', tabsWrap);
+      var moreBtn = $('[data-tabs-more]', tabsWrap);
+      var syncMore = function () {
+        var left = tabsEl.scrollWidth - tabsEl.clientWidth - tabsEl.scrollLeft;
+        tabsWrap.classList.toggle('has-more', left > 8);
+      };
+      tabsEl.addEventListener('scroll', syncMore, { passive: true });
+      window.addEventListener('resize', syncMore);
+      moreBtn.addEventListener('click', function () { tabsEl.scrollTo({ left: tabsEl.scrollWidth, behavior: 'smooth' }); });
+      tabs.forEach(function (t) { t.addEventListener('click', function () { t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }); });
+      syncMore();
+    }
+
     // Suwaki: wypełnienie toru + wartość
     function syncRange(r) {
       var p = (r.value - r.min) / (r.max - r.min) * 100;
