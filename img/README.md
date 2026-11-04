@@ -41,3 +41,10 @@ zdjęcie właściciela pionowe 4:5.
 Konwersja do WebP (np.): `cwebp -q 80 -resize 1600 0 zdjecie.jpg -o img/realizacje/dom-kominek.webp`
 
 Logo: `img/logo.svg` (pełne) i `img/logo-znak.svg` (sam znak) – tymczasowy logotyp „ekoON”.
+
+## Prawdziwe realizacje (dodane z Oferteo)
+
+`img/realizacje/`: dom-nad-drzwiami, dom-balkon-sinclair, dom-elewacja-sinclair, firma-agregaty-sinclair,
+serwis-czyszczenie, chlodnictwo-agregaty-dach, chlodnictwo-instalacja-miedz, chlodnictwo-rury,
+pompa-vaillant, pompa-kotlownia, elektryka-rozdzielnica, elektryka-rozdzielnica-wnek, elektryka-budowa.
+Galeria na stronie głównej ma filtry: Klimatyzacja / Chłodnictwo / Pompy ciepła / Elektryka.
