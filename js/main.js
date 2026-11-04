@@ -203,9 +203,22 @@
       btn.addEventListener('click', function () {
         var f = btn.dataset.filter;
         $$('[data-filter]').forEach(function (b) { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
-        items.forEach(function (it) { it.classList.toggle('is-hidden', f !== 'all' && it.dataset.cat !== f); });
+        applyFilter(f);
       });
     });
+    // Na start pokazujemy 12 zdjęć, resztę po kliknięciu „Pokaż więcej”
+    var LIMIT = 12, expanded = false, curFilter = 'all';
+    var galMore = $('[data-gallery-more]');
+    function applyFilter(f) {
+      curFilter = f;
+      items.forEach(function (it, i) {
+        var hide = (f !== 'all' && it.dataset.cat !== f) || (f === 'all' && !expanded && i >= LIMIT);
+        it.classList.toggle('is-hidden', hide);
+      });
+      if (galMore) galMore.parentNode.hidden = expanded || f !== 'all' || items.length <= LIMIT;
+    }
+    if (galMore) galMore.addEventListener('click', function () { expanded = true; applyFilter(curFilter); });
+    applyFilter('all');
 
     if (lb && typeof lb.showModal === 'function') {
       var stage = $('[data-lb-stage]', lb);

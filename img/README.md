@@ -45,6 +45,6 @@ Logo: `img/logo.svg` (pełne) i `img/logo-znak.svg` (sam znak) – tymczasowy lo
 ## Prawdziwe realizacje (dodane z Oferteo)
 
 `img/realizacje/`: dom-nad-drzwiami, dom-balkon-sinclair, dom-elewacja-sinclair, firma-agregaty-sinclair,
-serwis-czyszczenie, chlodnictwo-agregaty-dach, chlodnictwo-instalacja-miedz, chlodnictwo-rury,
-pompa-vaillant, pompa-kotlownia, elektryka-rozdzielnica, elektryka-rozdzielnica-wnek, elektryka-budowa.
+chlodnictwo-agregaty-dach, chlodnictwo-instalacja-miedz, chlodnictwo-rury,
+pompa-vaillant, pompa-kotlownia, pompa-kotlownia-vaillant, dom-kominek, dom-korytarz, dom-czarny, dom-lg-dual-inverter, dom-agregaty-taras, serwis-mitsubishi-zima, firma-dach-stelaz, firma-elewacja-biuro, firma-czarny-sinclair, firma-dach-sinclair, elektryka-rozdzielnica, elektryka-rozdzielnica-wnek, elektryka-budowa.
 Galeria na stronie głównej ma filtry: Klimatyzacja / Chłodnictwo / Pompy ciepła / Elektryka.

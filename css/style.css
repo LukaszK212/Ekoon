@@ -889,3 +889,7 @@ legend.field__label { margin-bottom: 12px; }
   .chat { transition: transform .35s var(--ease); }
   .callbar.is-hidden ~ .chat:not(.is-open) { transform: translateY(74px); }
 }
+
+/* Galeria: przycisk „Pokaż więcej realizacji” */
+.gallery-more { display: flex; justify-content: center; margin-top: 32px; }
+.gallery-more[hidden] { display: none; }
