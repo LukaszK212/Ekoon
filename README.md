@@ -35,16 +35,20 @@ Ceny są **orientacyjne i przykładowe** – do potwierdzenia z klientem. Wszyst
 w jednym miejscu: obiekt `PRICES` w `js/main.js`. Wycenę z kalkulatora można jednym kliknięciem
 dołączyć do formularza (ukryte pole `wycena-z-kalkulatora`).
 
-## Asystent czatu (lewy dolny róg)
+## Asystent czatu (prawy dolny róg)
 
-`js/chat.js` – asystent działający w całości w przeglądarce, bez zewnętrznych usług i kosztów.
-Po ~5 s pokazuje dymek „Cześć! W czym pomóc?” (raz na wizytę), rozmowa jest pamiętana przy przechodzeniu między podstronami.
+`js/chat.js` – asystent działający w całości w przeglądarce (bez zewnętrznych usług i kosztów), nastawiony na **pozyskanie klienta**:
 
-- Odpowiedzi: tablica `INTENTS` – każdy temat ma słowa kluczowe (`k`, początki słów bez polskich znaków) i odpowiedź (`a`).
-  Żeby dodać pytanie, dopisz nowy obiekt z listą słów i treścią odpowiedzi.
-- Ceny bierze z kalkulatora (`PRICES` w `js/main.js`), więc po zmianie cennika odpowiedzi aktualizują się same.
-- Liczy dobór mocy z metrażu („pokój 30 m² na poddaszu”, „dom 150 m² pompa”), podaje, czy firma jest teraz otwarta,
-  rozpoznaje miejscowości z obszaru działania, a podany numer telefonu wpisuje do formularza.
+- **Zaczepia sam**: po ~6 s dymek z propozycją dopasowaną do podstrony („Policz koszt” / „Mam pytanie”);
+  na komputerze także przy próbie wyjścia ze strony (raz na wizytę).
+- **Prowadzona wycena** krok po kroku: montaż klimatyzacji, serwis, awaria, pompa ciepła, oferta dla firmy, elektryka.
+  Wynik liczony z cennika kalkulatora (`PRICES` w `js/main.js`).
+- **Zbieranie kontaktu**: imię → telefon → miejscowość → potwierdzenie ze zgodą. Zgłoszenie trafia do **Netlify Forms**
+  (formularz `wycena`, pole `zrodlo = czat`, podsumowanie rozmowy w polu `wycena-z-kalkulatora`) – razem ze zgłoszeniami z formularza.
+  Gdy wysyłka się nie uda (np. podgląd lokalny), dane są wpisywane do formularza na stronie.
+- **Zachęty**: przy odpowiedziach na pytania proponuje bezpłatną wycenę, przy cenach – konkretną wycenę albo telefon;
+  awarie kieruje od razu do telefonu; wpisany numer telefonu uruchamia prośbę o oddzwonienie.
+- Odpowiedzi na pytania: tablica `INTENTS`, ścieżki wyceny: obiekt `FLOWS`.
 - Dane kontaktowe na górze pliku (`PHONE`, `EMAIL`, `HOURS`, `TOWNS`) – do podmiany razem z resztą strony.
 
 ## Dane tymczasowe – do podmiany przed publikacją

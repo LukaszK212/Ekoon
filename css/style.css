@@ -908,3 +908,25 @@ legend.field__label { margin-bottom: 12px; }
   .chat.is-open { inset: 0; left: 0; right: 0; }
   .chat__panel { left: 8px; right: 8px; }
 }
+
+/* Czat – elementy sprzedażowe */
+.chat__teaser { width: 310px; }
+.chat__teaser-body { cursor: default; }
+.chat__teaser-acts { display: flex; gap: 6px; margin-top: 10px; }
+.chat__teaser-btn { padding: 7px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: var(--font-head); color: var(--blue-600); background: var(--blue-50); transition: all .2s; }
+.chat__teaser-btn:hover { background: var(--blue); color: #fff; }
+.chat__teaser-btn--main { background: var(--grad); color: #fff; box-shadow: 0 6px 14px rgba(43, 168, 224, .3); }
+.chat__est { margin: 10px 0; padding: 12px 14px; border-radius: 14px; background: var(--navy); color: rgba(255, 255, 255, .75); background-image: radial-gradient(80% 120% at 100% 0%, rgba(43, 168, 224, .45), transparent 60%); }
+.chat__est small { display: block; font-size: 11.5px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: #8fd6f5; }
+.chat__est b { display: block; margin: 2px 0; font-family: var(--font-head); font-size: 22px; color: #fff !important; letter-spacing: -.02em; }
+.chat__est span { display: block; font-size: 12.5px; line-height: 1.4; }
+.chat__nudge { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: linear-gradient(110deg, var(--green-50), var(--blue-50)); border: 1px solid rgba(59, 178, 115, .25); font-size: 13.5px; }
+.chat__summary { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 10px 0; padding: 10px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); font-size: 13.5px; }
+.chat__summary span { color: var(--muted); }
+.chat__bubble small.chat__muted { display: block; line-height: 1.4; }
+.chat__bubble a:not(.chat__act) { color: var(--blue-600); text-decoration: underline; }
+.chat__chip--main { background: var(--grad); border-color: transparent; color: #fff; }
+.chat__chip--main:hover { filter: brightness(1.05); }
+.chat__foot a { display: inline-flex; align-items: center; gap: 4px; }
+.chat__foot .ico { width: 13px; height: 13px; }
+@media (max-width: 720px) { .chat__teaser { width: min(310px, calc(100vw - 28px)); } }
