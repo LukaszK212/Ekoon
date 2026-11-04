@@ -208,11 +208,14 @@
     });
     // Na start pokazujemy 12 zdjęć, resztę po kliknięciu „Pokaż więcej”
     var LIMIT = 12, expanded = false, curFilter = 'all';
+    var mobileGal = window.matchMedia('(max-width: 720px)');
     var galMore = $('[data-gallery-more]');
     function applyFilter(f) {
       curFilter = f;
       items.forEach(function (it, i) {
-        var hide = (f !== 'all' && it.dataset.cat !== f) || (f === 'all' && !expanded && i >= LIMIT);
+        // na telefonie na start tylko wybrane zdjęcia (data-mobile), na komputerze pierwsze 12
+        var collapsedHide = mobileGal.matches ? !it.hasAttribute('data-mobile') : i >= LIMIT;
+        var hide = (f !== 'all' && it.dataset.cat !== f) || (f === 'all' && !expanded && collapsedHide);
         it.classList.toggle('is-hidden', hide);
       });
       if (galMore) {
@@ -231,6 +234,7 @@
       }
     });
     applyFilter('all');
+    if (mobileGal.addEventListener) mobileGal.addEventListener('change', function () { applyFilter(curFilter); });
 
     if (lb && typeof lb.showModal === 'function') {
       var stage = $('[data-lb-stage]', lb);
