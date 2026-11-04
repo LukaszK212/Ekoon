@@ -720,7 +720,7 @@ legend.field__label { margin-bottom: 12px; }
 .photo--hero img { object-position: 50% 6%; }
 .float-card--temp { top: 44%; }
 .float-card--pill { bottom: 22%; }
-@media (max-width: 720px) { .float-card--temp { display: none; } .hero__visual { padding-top: 0; } }
+@media (max-width: 720px) { .hero__visual { padding-top: 0; } }
 
 /* Zdjęcie główne w pionie (pasuje do zdjęcia 3:4) – bez ucinania */
 .photo.photo--hero { aspect-ratio: 4 / 5; }
@@ -729,4 +729,14 @@ legend.field__label { margin-bottom: 12px; }
 @media (max-width: 720px) {
   .hero__visual { padding: 0 0 56px; }
   .float-card--review { right: 10px; bottom: 0; max-width: 250px; }
+}
+
+/* Wskaźnik temperatury na telefonie – po lewej, w połowie wysokości zdjęcia */
+@media (max-width: 720px) {
+  .float-card--temp { display: flex; top: 40%; bottom: auto; left: -8px; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 16px; }
+  .float-card--temp .float-card__icon { width: 36px; height: 36px; border-radius: 11px; }
+  .float-card--temp .float-card__icon .ico { width: 20px; height: 20px; }
+  .float-card--temp .float-card__big { font-size: 19px; }
+  .float-card--temp small { font-size: 11.5px; }
+  .float-card--temp .eq { height: 18px; }
 }
