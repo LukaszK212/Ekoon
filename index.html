@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -529,7 +529,7 @@
       <button type="button" class="filter" data-filter="pompy" aria-pressed="false">Pompy ciepła</button>
       <button type="button" class="filter" data-filter="elektryka" aria-pressed="false">Elektryka</button>
     </div>
-    <div class="gallery" data-gallery>
+    <div class="gallery" id="galeria" data-gallery>
       <figure class="gitem gitem--big" data-cat="klima"><button type="button" class="gitem__btn"><div class="photo" data-src="img/realizacje/dom-kominek" data-alt="Klimatyzator w złotym kolorze nad przejściem w salonie z marmurowym kominkiem" data-label="Salon z kominkiem · Dom"></div><span class="gitem__zoom"><svg class="ico"><use href="#i-expand"/></svg></span></button><figcaption>Salon z kominkiem · Dom</figcaption></figure>
       <figure class="gitem gitem--tall" data-cat="pompy"><button type="button" class="gitem__btn"><div class="photo" data-src="img/realizacje/pompa-vaillant" data-alt="Pompa ciepła Vaillant aroTHERM przy budynku, na podstawach antywibracyjnych" data-label="Pompa ciepła Vaillant · Pompy ciepła"></div><span class="gitem__zoom"><svg class="ico"><use href="#i-expand"/></svg></span></button><figcaption>Pompa ciepła Vaillant · Pompy ciepła</figcaption></figure>
       <figure class="gitem gitem--tall" data-cat="klima"><button type="button" class="gitem__btn"><div class="photo" data-src="img/realizacje/dom-korytarz" data-alt="Klimatyzator Sinclair w eleganckim korytarzu ze złotymi ścianami" data-label="Elegancki korytarz · Dom"></div><span class="gitem__zoom"><svg class="ico"><use href="#i-expand"/></svg></span></button><figcaption>Elegancki korytarz · Dom</figcaption></figure>
@@ -554,7 +554,7 @@
       <figure class="gitem gitem--tall" data-cat="klima"><button type="button" class="gitem__btn"><div class="photo" data-src="img/realizacje/dom-elewacja-sinclair" data-alt="Agregat Sinclair na elewacji budynku z instalacją w białym korytku" data-label="Agregat na elewacji · Klimatyzacja"></div><span class="gitem__zoom"><svg class="ico"><use href="#i-expand"/></svg></span></button><figcaption>Agregat na elewacji · Klimatyzacja</figcaption></figure>
       <figure class="gitem gitem--tall" data-cat="chlodnictwo"><button type="button" class="gitem__btn"><div class="photo" data-src="img/realizacje/chlodnictwo-rury" data-alt="Izolowane przewody chłodnicze poprowadzone pod sufitem na uchwytach" data-label="Izolowane przewody · Chłodnictwo"></div><span class="gitem__zoom"><svg class="ico"><use href="#i-expand"/></svg></span></button><figcaption>Izolowane przewody · Chłodnictwo</figcaption></figure>
     </div>
-    <div class="gallery-more"><button type="button" class="btn btn--outline" data-gallery-more>Pokaż więcej realizacji<svg class="ico"><use href="#i-down"/></svg></button></div>
+    <div class="gallery-more"><button type="button" class="btn btn--outline" data-gallery-more aria-expanded="false" aria-controls="galeria"><span>Pokaż więcej realizacji</span><svg class="ico"><use href="#i-down"/></svg></button></div>
   </div>
 </section>
 
@@ -810,7 +810,7 @@
   <button type="button" class="lightbox__nav lightbox__nav--next round-btn" data-lb-next aria-label="Następne zdjęcie"><svg class="ico"><use href="#i-right"/></svg></button>
 </dialog>
 
-<script src="js/main.js?v=10" defer></script>
+<script src="js/main.js?v=11" defer></script>
 <script src="js/chat.js?v=1" defer></script>
 </body>
 </html>

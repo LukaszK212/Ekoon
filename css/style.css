@@ -893,3 +893,5 @@ legend.field__label { margin-bottom: 12px; }
 /* Galeria: przycisk „Pokaż więcej realizacji” */
 .gallery-more { display: flex; justify-content: center; margin-top: 32px; }
 .gallery-more[hidden] { display: none; }
+.gallery-more .ico { transition: transform .3s var(--ease); }
+.gallery-more .is-expanded .ico { transform: rotate(180deg); }

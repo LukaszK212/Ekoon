@@ -215,9 +215,21 @@
         var hide = (f !== 'all' && it.dataset.cat !== f) || (f === 'all' && !expanded && i >= LIMIT);
         it.classList.toggle('is-hidden', hide);
       });
-      if (galMore) galMore.parentNode.hidden = expanded || f !== 'all' || items.length <= LIMIT;
+      if (galMore) {
+        galMore.parentNode.hidden = f !== 'all' || items.length <= LIMIT;
+        galMore.querySelector('span').textContent = expanded ? 'Zwiń realizacje' : 'Pokaż więcej realizacji';
+        galMore.setAttribute('aria-expanded', String(expanded));
+        galMore.classList.toggle('is-expanded', expanded);
+      }
     }
-    if (galMore) galMore.addEventListener('click', function () { expanded = true; applyFilter(curFilter); });
+    if (galMore) galMore.addEventListener('click', function () {
+      expanded = !expanded;
+      applyFilter(curFilter);
+      if (!expanded) {
+        var sec = document.getElementById('realizacje');
+        if (sec) sec.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
     applyFilter('all');
 
     if (lb && typeof lb.showModal === 'function') {
