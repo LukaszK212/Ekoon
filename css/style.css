@@ -721,3 +721,12 @@ legend.field__label { margin-bottom: 12px; }
 .float-card--temp { top: 44%; }
 .float-card--pill { bottom: 22%; }
 @media (max-width: 720px) { .float-card--temp { display: none; } .hero__visual { padding-top: 0; } }
+
+/* Zdjęcie główne w pionie (pasuje do zdjęcia 3:4) – bez ucinania */
+.photo.photo--hero { aspect-ratio: 4 / 5; }
+.photo--hero img { object-position: 50% 0; }
+@media (max-width: 980px) { .photo.photo--hero { aspect-ratio: 4 / 5; max-height: 78vh; } }
+@media (max-width: 720px) {
+  .hero__visual { padding: 0 0 56px; }
+  .float-card--review { right: 10px; bottom: 0; max-width: 250px; }
+}
